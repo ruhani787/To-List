@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="Todo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="work">
+      <select class="select-category">
+        <option value="">Day</option>
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+        <option>Sunday</option>
+      </select>
+
+      <div class="input-wrapper">
+        <i class="fa-solid fa-pencil"></i>
+        <input
+          id="textarea"
+          type="text"
+          placeholder="Add Your Work Here....."
+        />
+      </div>
+      <button class="addbtn">Add</button>
+      <select class="selectDisplay">
+        <option value="all">All Task</option>
+        <option value="completed">Completed Task</option>
+        <option value="uncompleted">uncompleted Task</option>
+      </select>
+    </div>
+
+    <div class="weekday">
+      <div class="day">
+        <h2>Monday</h2>
+      </div>
+      <div class="day">
+        <h2>Tuesday</h2>
+      </div>
+      <div class="day">
+        <h2>Wednesday</h2>
+      </div>
+      <div class="day">
+        <h2>Thursday</h2>
+      </div>
+    </div>
+    <div class="weekend">
+      <div class="day">
+        <h2>Friday</h2>
+      </div>
+      <div class="day">
+        <h2>Saturday</h2>
+      </div>
+      <div class="day">
+        <h2>Sunday</h2>
+      </div>
+    </div>
+
+    <script src="Todo.js"></script>
+  </body>
+</html>

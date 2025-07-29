@@ -1,0 +1,251 @@
+/* General Body Styling */
+body {
+  background-image: url(pexels-photo-7663159.webp);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+/* Input and Icon Styling */
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.input-wrapper i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #be61aa;
+  pointer-events: none;
+  font-size: 16px;
+}
+
+#textarea {
+  background-color: rgb(210, 207, 204);
+  padding: 0.6rem 1rem 0.6rem 2.5rem; /* left padding for icon */
+  width: 300px;
+  font-size: medium;
+  border: 2px solid rgb(171, 161, 155);
+  border-radius: 2vw;
+  text-align: left;
+}
+
+/* Button & Select Styling */
+.select-category,
+.addbtn {
+  border: 2px solid rgb(171, 161, 155);
+  border-radius: 3vw;
+  width: 53px;
+  height: 29px;
+  background: rgb(211, 203, 197);
+  font-size: 13px;
+}
+.select-category:focus{
+  border-color: #be61aa;
+  background-color: #f3e9f1;
+}
+.addbtn:focus{
+  border-color: #be61aa;
+  background-color: #f3e9f1;
+}
+.selectDisplay{
+  border: 2px solid rgb(171, 161, 155);
+  border-radius: 3vw;
+  padding: 0.3rem 1rem;
+  background: rgb(211, 203, 197);
+  font-size: 13px;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  margin: 1vw;
+}
+.selectDisplay:focus {
+  border-color: #be61aa;
+  background-color: #f3e9f1;
+}
+/* Day Blocks */
+.day {
+  background-color: rgb(231, 168, 212);
+  width: 250px;
+  min-height: 220px;
+  max-height: 350px;
+  text-align: center;
+  font-size: 14px;
+  border: 2px solid rgb(210, 207, 204);
+  border-radius: 3vw;
+  overflow-y: auto;
+}
+
+.day::-webkit-scrollbar {
+  width: 5px;
+}
+.day::-webkit-scrollbar-track {
+  background: transparent;
+}
+.day::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+/* Task Content */
+.task-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px auto;
+  width: 90%;
+}
+.task-checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #f7f0f5;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.task-checkbox:checked {
+  background-color: #be61aa;
+  border-color: #be61aa;
+}
+.task-checkbox:checked::after {
+  content: '\2713';
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 50%;
+  transform: translate(-50%, -55%);
+  color: white;
+  font-size: 14px;
+}
+.blank-line {
+  border-bottom: 2px solid white;
+  width: 80%;
+  height: 24px;
+  color: white;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+}
+.blank-line:focus {
+  color: black;
+}
+
+/* Heading Sticky */
+.day h2 {
+  font-family: cursive;
+  text-decoration: underline;
+  position: sticky;
+  top: 0;
+  background: rgb(231, 168, 212);
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Layout Blocks */
+.weekday,
+.weekend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+  margin-top: 2vw;
+}
+
+.work {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* ========== RESPONSIVENESS ========== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  #textarea {
+    width: 70vw;
+    font-size: 1rem;
+    padding-left: 2.2rem;
+  }
+
+  .input-wrapper i {
+    font-size: 14px;
+    left: 10px;
+  }
+
+  .select-category,
+  .addbtn {
+    width: 60px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+ .select-display {
+    font-size: 12px;
+    width: 150px;
+  }
+  .day {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .work {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .input-wrapper,
+  .select-category,
+  .addbtn {
+    width: 100%;
+  }
+  .select-display {
+    font-size: 11px;
+    padding: 0.3rem 0.8rem;
+    width: 120px;
+  }
+  #textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 2rem;
+  }
+
+  .input-wrapper i {
+    left: 10px;
+    font-size: 14px;
+  }
+
+  .day {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .blank-line {
+    font-size: 0.9rem;
+  }
+
+  .addbtn {
+    font-size: 0.9rem;
+  }
+
+  .task-checkbox {
+    width: 14px;
+    height: 14px;
+  }
+}
